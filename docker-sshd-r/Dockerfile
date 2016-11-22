@@ -9,6 +9,7 @@ RUN echo "deb http://cran.stat.auckland.ac.nz/bin/linux/debian jessie-cran3/" >>
 # Taken from officiel R-base Dockerfile
 RUN apt-get update \
     && apt-get install -y \
+        sudo \
         ed \
         less \
         locales \
