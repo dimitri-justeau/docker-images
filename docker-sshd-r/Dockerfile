@@ -37,3 +37,9 @@ RUN apt-get install -y r-base r-base-dev
 
 # Install libatlas (see https://cran.r-project.org/bin/linux/debian/)
 RUN apt-get install -y libatlas3-base
+
+RUN apt-get install -y software-properties-common python-software-properties
+
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
+    && apt-get update \
+    && apt-get install -y libstdc++6-4.7-dev
